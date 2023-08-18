@@ -10,10 +10,10 @@ use std::{thread, time::{self, UNIX_EPOCH}};
 #[tokio::main]
 async fn main() -> Result<(), Box<TError>> {
     let conn = Connection::open(&OpenConnectionArguments::new(
-        "localhost",
-        5672,
-        "guest",
-        "guest",
+        "jackal.rmq.cloudamqp.com",
+        5672  ,
+        "hasdzydy:hasdzydy",
+        "6KUMdtlqdDab3v34owwQmXIpC8Df-daC",
     ))
     .await.unwrap();
     conn.register_callback(DefaultConnectionCallback).await.unwrap();
